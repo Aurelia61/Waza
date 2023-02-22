@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thales.interfaceclient.controller.MainViewController">
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="1000.0" minHeight="10.0" prefHeight="100.0" />
+          <RowConstraints maxHeight="1000.0" minHeight="10.0" prefHeight="100.0" />
+          <RowConstraints maxHeight="1000.0" minHeight="10.0" prefHeight="100.0" />
+          <RowConstraints maxHeight="1000.0" minHeight="10.0" prefHeight="100.0" />
+        </rowConstraints>
+         <children>
+            <AnchorPane fx:id="listChatPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="3">
+               <children>
+                  <ListView layoutY="-1.0" prefHeight="300.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="conversationPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowSpan="3" />
+            <AnchorPane fx:id="writeMessagePane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.rowIndex="3">
+               <children>
+                  <TextField fx:id="currentWrittingMessageField" layoutX="39.0" layoutY="26.0" prefHeight="24.0" prefWidth="331.0" />
+                  <Button fx:id="messageCancelButton" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" text="annuler" />
+                  <Button fx:id="messageSendButton" layoutX="308.0" layoutY="62.0" mnemonicParsing="false" text="Envoyer" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <children>
+                  <Label fx:id="mailLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="150.0" text="mail" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Se déconnecter" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
